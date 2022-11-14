@@ -1,0 +1,55 @@
+body{
+    font-family: Georgia, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.baner{
+    background-color: #824555;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.lewy,.srodek,.prawy{
+    float: left;
+}
+.lewy,.srodek{
+    background-color: #A26475;
+    color: white;
+    width: 30%;
+    height: 300px;
+}
+.prawy{
+    background-color: #A26475;
+    color: white;
+    width: 40%;
+    height: 300px;
+    text-align: right;
+}
+img{
+    height: 300px;
+}
+.glowny{
+    float: left;
+    width: 100%;
+    background-color: #F0EAE2;
+    padding: 50px;
+}
+.stopka{
+    width: 100%;
+    float: left;
+    background-color: #824555;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+table, td, th{
+    border: 2px solid #69293A;
+    padding: 7px;
+    border-collapse: collapse;
+}
+.red{background-color: red;}
+.green{background-color: green;}
+.blue{background-color: blue}
+ul{
+    list-style-type: square;
+}

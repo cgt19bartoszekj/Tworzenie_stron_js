@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+<div class="lewy">
+    <h1>Konfigurator stylu</h1>
+    <p>Podaj kolor tła</p>
+    <input type="button" value="Indigo" class="indigo">
+    <input type="button" value="SteelBlue" class="steelblue">
+    <input type="button" value="Olive" class="olive">
+    <p>Podaj kolor czcionki</p>
+    <select>
+        <option value="White">White</option>
+        <option value="Tan">Tan</option>
+        <option value="Bisque">Bisque</option>
+        <option value="Plum">Plum</option>
+    </select>
+    <p>Podaj rozmiar czcionki w procentach, np. 200%</p>
+    <input onfocusout="zmienRozmiar()" type="text" value="100%" id="rozmiar" class="rozmiar">
+    <p>Czy rysunek ma mieć ramkę?</p>
+    <input type="checkbox" checked id="ramka" onclick="ramkaZmien()">
+    <label for="ramka">Rysuj ramkę</label>
+    <p>Jaki jest typ punktora listy?</p>
+    <input type="radio" name="punktor" id="disc" checked>
+    <label for="disc">dysk</label><br>
+    <input type="radio" name="punktor" id="square">
+    <label for="square">kwadrat</label><br>
+    <input type="radio" name="punktor" id="circle">
+    <label for="circle">okrąg</label><br>
+</div>
+<div class="prawy">
+    <img src="gibraltar.png" alt="gibraltar" class="gibraltar">
+    <ul>
+        <li>element 1</li>
+        <li>element 2</li>
+        <li>element 3</li>
+    </ul>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet debitis delectus doloremque dolores nemo obcaecati
+        odio similique sit ut voluptas!</p>
+</div>
+<footer class="stopka">
+    Autor: kubaxd
+</footer>
+<script>
+const rightPanel = document.querySelector(".prawy");
+const kolorTla = document.querySelectorAll("input[type='button']");
+const kolorCzcionki = document.querySelectorAll("select");
+const rozmiarCzcionki = document.querySelector(".rozmiar");
+const gibraltar = document.querySelector(".gibraltar");
+const ramka = document.getElementById("ramka");
+
+function ramkaZmien(){
+    if(ramka.checked == true) {
+        gibraltar.style.border = "1px solid white";
+    }
+    else{
+        gibraltar.style.border = "none";
+    }
+}
+
+function zmienRozmiar(){
+    rightPanel.style.fontSize = rozmiarCzcionki.value
+}
+function zmienKolor(){
+    rightPanel.style.color = this.value
+}
+function zmienTlo(){
+    rightPanel.style.backgroundColor = this.value
+}
+kolorTla.forEach(przycisk=>przycisk.addEventListener('click', zmienTlo))
+kolorCzcionki.forEach(opcja=>opcja.addEventListener('change', zmienKolor))
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+body {
+	background-color:#F6E5DC;
+	font-family: Verdana;
+	margin: 0px;
+	padding: 0px;
+}
+h1 {
+text-align: center
+}
+#baner{
+	background-color: #2F180C;
+	color: white;
+}
+#lewy {
+float: left;
+width: 60%;
+background-color: #F6E5DC;
+height: 350px;
+}
+#prawy {
+float: right;
+width: 40%;
+height: 350px;
+background-color: #F6E5DC;
+}
+#prawy2{
+		font-size: 150%;
+}
+#czolo{
+	width: 70%;
+	height: 100%;
+}
+#dolny{
+	float: center;
+	text-align: center;
+	width: 100%;
+	background-color: #D0B6A8;
+}
+#stopka{
+	float: center;
+	color: white;
+	background-color: #2F180C;
+}
+#reset{
+	background-color: #2F180C;
+	color: white;
+	margin: 10px;
+	padding: 5px;
+}
+#submit{
+	background-color: #2F180C;
+	color: white;
+}
+	
